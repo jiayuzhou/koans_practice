@@ -1,2 +1,3 @@
-# koans_practice
-KOANS ruby lessen
+# Ruby Practice through Koans
+
+KOANS's Ruby lesson. 
