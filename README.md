@@ -1,3 +1,3 @@
-# Ruby Practice through Koans
+# Ruby Practice through KOANS
 
 KOANS's Ruby lesson. 
