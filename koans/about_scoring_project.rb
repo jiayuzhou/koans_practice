@@ -39,7 +39,7 @@ def score(dice)
     cnt[roll] = cnt[roll] ? cnt[roll] + 1: 1 
   }
 
-  puts cnt
+  #puts cnt
   score = 0
 
   # count three. 
@@ -54,7 +54,7 @@ def score(dice)
     end
   }
 
-  puts cnt
+  #puts cnt
 
   # count remaining
   cnt.each { |key, val|  
