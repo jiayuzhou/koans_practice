@@ -104,8 +104,10 @@ class AboutClassMethods < Neo::Koan
                                    end
 
   def test_class_statements_return_the_value_of_their_last_expression
-    assert_equal __, LastExpressionInClassStatement
+    assert_equal 21, LastExpressionInClassStatement
   end
+
+  # ^ this is somewhat ridiculous. How the hell do I know if I don't read the source?
 
   # ------------------------------------------------------------------
 
@@ -114,8 +116,10 @@ class AboutClassMethods < Neo::Koan
                                end
 
   def test_self_while_inside_class_is_class_object_not_instance
-    assert_equal __, Dog == SelfInsideOfClassStatement
+    assert_equal true, Dog == SelfInsideOfClassStatement
   end
+
+  # so this self returns a reflection of the class object. 
 
   # ------------------------------------------------------------------
 
@@ -126,7 +130,7 @@ class AboutClassMethods < Neo::Koan
   end
 
   def test_you_can_use_self_instead_of_an_explicit_reference_to_dog
-    assert_equal __, Dog.class_method2
+    assert_equal :another_way_to_write_class_methods, Dog.class_method2
   end
 
   # ------------------------------------------------------------------
@@ -140,7 +144,7 @@ class AboutClassMethods < Neo::Koan
   end
 
   def test_heres_still_another_way_to_write_class_methods
-    assert_equal __, Dog.another_class_method
+    assert_equal :still_another_way, Dog.another_class_method
   end
 
   # THINK ABOUT IT:
@@ -159,11 +163,13 @@ class AboutClassMethods < Neo::Koan
   # Which do you prefer and why?
   # Are there times you might prefer one over the other?
 
+  # I am from Java and I defnitely use self.method, though not the case in Ruby users. 
+
   # ------------------------------------------------------------------
 
   def test_heres_an_easy_way_to_call_class_methods_from_instance_methods
     fido = Dog.new
-    assert_equal __, fido.class.another_class_method
+    assert_equal :still_another_way, fido.class.another_class_method
   end
 
 end
